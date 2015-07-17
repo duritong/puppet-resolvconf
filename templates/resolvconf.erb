@@ -9,3 +9,7 @@ search <%= @search %>
 <% Array(@nameservers).each do |nameserver| -%>
 nameserver <%= nameserver %>
 <% end -%>
+
+<% if @tail -%>
+<%= tail %>
+<% end -%>
