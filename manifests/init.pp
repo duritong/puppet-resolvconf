@@ -16,10 +16,7 @@
 class resolvconf(
   $domain = $::domain,
   $search = $::domain,
-  $nameservers = [
-    '77.109.138.45',
-    '77.109.139.29',
-  ],
+  $nameservers = [ '8.8.8.8' ],
   $tail,
 ) {
   $content = $::operatingsystem ? {

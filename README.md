@@ -14,9 +14,9 @@ array. For example:
     }
 
 ... will create a `resolv.conf` that searches the domain name of the
-machine (the `$::domain` fact) and uses Google's recursive
-nameservers. The domain name and search path can be overriden with the
-`$domain` and `$search` parameters.
+machine (the `$::domain` fact) and uses Google's recursive nameservers
+(also the default). The domain name and search path can be overriden
+with the `$domain` and `$search` parameters.
 
 Extra options can be added at the end of the `resolv.conf` file with
 the `$tail` argument.
