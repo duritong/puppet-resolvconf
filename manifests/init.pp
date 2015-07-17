@@ -5,6 +5,7 @@
 # Copyright 2008, Puzzle ITC GmbH
 # Marcel Haerry haerry+puppet(at)puzzle.ch
 # Simon Josi josi+puppet(at)puzzle.ch
+# Copyright 2015, Antoine Beaupré <anarcat@koumbit.org>
 #
 # This program is free software; you can redistribute
 # it and/or modify it under the terms of the GNU
