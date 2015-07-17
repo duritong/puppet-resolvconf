@@ -19,7 +19,7 @@ class resolvconf(
     '77.109.138.45',
     '77.109.139.29',
   ],
-  $options,
+  $tail,
 ) {
   $content = $::operatingsystem ? {
     openbsd => template("resolvconf/resolvconf.${::operatingsystem}.erb"),
