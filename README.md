@@ -19,7 +19,17 @@ machine (the `$::domain` fact) and uses Google's recursive nameservers
 with the `$domain` and `$search` parameters.
 
 Extra options can be added at the end of the `resolv.conf` file with
-the `$tail` argument.
+the `$tail` argument. (Note that the `$tail` name was chosen because
+`options` is Linux-specific and will vary on different platforms.)
+
+A more complete example:
+
+    class { 'resolvconf':
+        nameservers => [ '8.8.8.8' ],
+        domain => 'example.com',
+        search => 'office.example.com bar.example.com',
+        tail => 'options timeout:1 attempts:3 rotate',
+    }
 
 See the `resolv.conf(5)` manpage for more information about those
 parameters and the syntax of the resolv.conf file.
