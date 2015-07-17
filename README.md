@@ -21,6 +21,9 @@ nameservers. The domain name and search path can be overriden with the
 Extra options can be added at the end of the `resolv.conf` file with
 the `$tail` argument.
 
+See the `resolv.conf(5)` manpage for more information about those
+parameters and the syntax of the resolv.conf file.
+
 resolvconf::dhcp class
 ----------------------
 
