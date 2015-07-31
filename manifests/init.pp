@@ -14,10 +14,10 @@
 #
 
 class resolvconf(
-  $domain = $::domain,
-  $search = $::domain,
+  $domain      = $::domain,
+  $search      = $::domain,
   $nameservers = [ '8.8.8.8' ],
-  $tail,
+  $tail        = undef,
 ) {
   $content = $::operatingsystem ? {
     openbsd => template("resolvconf/resolvconf.${::operatingsystem}.erb"),
