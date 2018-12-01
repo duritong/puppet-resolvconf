@@ -6,9 +6,11 @@ domain <%= @domain  %>
 search <%= @search %>
 <% end -%>
 
-<% Array(@nameservers).each do |nameserver| -%>
+<% Array(@nameservers).each do |nameserver|
+  unless nameserver.nil? || nameserver.empty?-%>
 nameserver <%= nameserver %>
-<% end -%>
+<% end
+end -%>
 
 <% if @tail -%>
 <%= tail %>
