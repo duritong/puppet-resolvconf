@@ -21,9 +21,9 @@ class resolvconf(
   Optional[String]
     $tail        = undef,
 ) {
-  $content = $::operatingsystem ? {
-    openbsd => template("resolvconf/resolvconf.${::operatingsystem}.erb"),
-    default => template('resolvconf/resolvconf.erb'),
+  $content = $facts['operatingsystem'] ? {
+    "OpenBSD" => template("resolvconf/resolvconf.${facts['operatingsystem']}.erb"),
+    default   => template('resolvconf/resolvconf.erb'),
   }
   file{'/etc/resolv.conf':
     content => $content,
